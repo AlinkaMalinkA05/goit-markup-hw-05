@@ -409,16 +409,20 @@
         </ul>
     </div>
     <div class="subscribe">
+        <p class="text-form">Subscribe</p>
         <form class="email-form">
-            <label class="field-form-label" for="client-email"
-            >Subscribe</label
+            <label class="field-form-label" for="client-email"></label
             >
             <input class="email"
-            type="text"
+            type="email"
             placeholder="E-mail"
             id="client-email"
             name="email-client"
             pattern="[a-zA-Z@]">
+            <button class="form-btn" type="submit">Subscribe
+                <svg class="form-btn-icon"width="24" height="24" aria-label="send"></svg>
+                <use href="./images/icons.svg#icon-icon_telegram"></use>
+            </button>
         </form>
     </div>
     </div>
@@ -426,11 +430,53 @@
 <div class="backdrop is-open">
 <div class="modal">
     <button class="modal-close-btn">
-        <svg class="modal-icon-close" width="26" height="24" aria-label="close window">
+        <svg class="modal-icon-close" width="24" height="24" aria-label="close window">
         <use href="/images/icons.svg#icon-close"></use>
         </svg>
-        
     </button>
+    <p class="text-modal-window">leave your contacts and we will call you back</p>
+    <form class="modal-form">
+        <div class="name-wrapper">
+            <label class="name-label"  for="user-name" >Name</label>
+            <input class="name-input" 
+            id="user-name"
+            name="user-name" 
+            type="text"
+            pattern="[a/a-zA-ZА-Яа-яіІєЄїЇґҐ']+"
+            title="Alina">
+        </div>
+        <div class="phone-wrapper">
+            <label class="phone-label" for="user-phone">Phone</label>
+            <input class="phone-input" 
+            id="user-phone" 
+            name="user-phone"
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            title="xxx-xxx-xx-xx">
+        </div>
+        <div class="email-wrapper">
+            <label class="email-label" for="user-email">Email</label>
+            <input class="email-input" id="user-email" name="user-email" type="email">
+        </div>
+        <div class="comment-wrapper">
+            <label class="comment-label" for="user-comment" >Comment</label>
+            <textarea class="comment"
+            id="user-comment"
+            name="user-comment"  
+            placeholder="Text input">
+        </textarea>
+        </div>
+        <div class="form-checkbox">
+            <input class="privacy-checkbox" 
+            id="user-privacy"
+            name="user-privacy"
+            type="checkbox" 
+            value="true"
+            required>
+            <label class="checkboxlabel" for="user-privacy">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+        </div>
+        <button class="send-form-btn" type="submit">Send</button>
+    </form>
 </div>
 </div>
 </body>
