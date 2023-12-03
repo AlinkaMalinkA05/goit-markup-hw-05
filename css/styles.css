@@ -521,6 +521,7 @@ padding-left: 24px;
 
 .modal-close-btn {
 position: absolute;
+border-radius: 50%;
 top: 24px;
 right: 24px;
 fill: #E7E9FC;
