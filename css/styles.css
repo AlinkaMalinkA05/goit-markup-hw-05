@@ -458,6 +458,15 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   width: 264px;
   height: 40px;
   padding-left: 16px;
+  border: 1px solid #ffffff; 
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em; 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: #ffffff; 
+
 }
 
 .text-form {
@@ -472,22 +481,29 @@ margin-bottom: 16px;
 .email-form {
   display: flex;
   gap: 24px;
-  
-
  }
 .form-btn{
+display: flex;
 border-radius: 4px;
 background: #4D5AE5;
-width: 165px;
-  color: #FFF;
+min-width: 165px;
+height: 40px; 
+color: #FFF;
 text-align: center;
-font-family: Roboto;
+font-family: "Roboto", sans-serif;
 font-size: 16px;
 font-weight: 500;
 line-height: 1.5; /* 150% */
 letter-spacing: 0.04em;
 padding-top: 8px;
 padding-left: 24px;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+border: none;
+}
+.form-btn-icon {
+  margin-left: 16px;
 }
 
 
