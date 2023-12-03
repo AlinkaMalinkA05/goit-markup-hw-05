@@ -47,13 +47,7 @@ img {
   padding-right: 15px;
   margin: 0 auto;
 }
-.modal-close-btn {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  line-height: 0;
-  stroke: #111111;
-}
+
 /*=========/Styles=========*/
 
 /*============Header=========*/
@@ -523,26 +517,39 @@ padding-left: 24px;
   transform: translate(-50%, -50%);
   padding: 24px;
   padding-top: 72px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #e7e9fc; 
+border: 1px solid rgba(0, 0, 0, 0.1); 
+stroke: rgba(0, 0, 0, 0.10);
 position: absolute;
 border-radius: 50%;
 top: 24px;
 right: 24px;
-fill: #E7E9FC;
-stroke-width: 1px;
 cursor: pointer;
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404BBF;
 }
-.modal-icon-close {
-color: #2E2F42;
+
+.modal-icon-close { 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+ .modal-icon-close:hover,
+ .modal-icon-close:focus {
+ fill: #ffffff
+ }
+ 
 
 .backdrop.is-open {
   opacity: 1;
@@ -631,6 +638,7 @@ border-color: #4D5AE5;
 }
 .comment::placeholder {
   color: rgba(46, 47, 66, 0.40);
+  padding: 8px 16px;
 }
 .form-checkbox-label {
   color: #8E8F99;
@@ -648,11 +656,13 @@ letter-spacing: 0.04em;
   height: 16px;
   stroke-width: 1px;
   stroke: rgba(46, 47, 66, 0.40);
-  border-radius: 4px;
-  border: 1px solid #8E8F99;
+  border-radius: 2px;
   cursor: pointer;
   margin-right: 8px;
-}
+  border: 1px solid rgba(46, 47, 66, 0.4); 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   fill: transparent; 
+  }
 .privacy-checkbox:checked 
 + .form-checkbox-label 
 > .new-checkbox {
@@ -662,7 +672,7 @@ letter-spacing: 0.04em;
 .privacy-checkbox:focus 
 + .form-checkbox-label 
 > .new-checkbox {
-border-color:#404BBF;
+ border: none;
 }
 .checkbox-icon {
   fill: #F4F4FD;
@@ -677,11 +687,11 @@ border-color:#404BBF;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   color: #FFF;
   text-align: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; 
@@ -689,5 +699,7 @@ border-color:#404BBF;
   border-radius: 4px;
   background: #4D5AE5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 16px 32px;
+  padding: 16px 32px 24px;
+  cursor: pointer;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
